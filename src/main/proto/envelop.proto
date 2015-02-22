@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package envelop;
+
+option java_package = "omar.mebarki.envelop";
+
+ message  Envelop {
+     string service =1;
+     string methodHash = 2;
+     repeated bytes args=3;
+
+ }
