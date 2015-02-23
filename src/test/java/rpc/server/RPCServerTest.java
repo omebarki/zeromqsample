@@ -1,9 +1,10 @@
 package rpc.server;
 
-import omar.mebarki.envelop.EnvelopOuterClass;
 import org.junit.Test;
 import rpc.api.endpoint.EndPoint;
 import rpc.api.endpoint.EndpointMessageHandler;
+
+import java.util.ArrayList;
 
 /**
  * Created by Omar MEBARKI on 22/02/15.
@@ -15,7 +16,7 @@ public class RPCServerTest {
     public void simpleTest() {
 
         EndPoint endPoint = new ZeroMQReqRepEndPoint("tcp://*:12345");
-        EndpointMessageHandler<byte[]> messageHandler = new ZeroMQMessageBytesHandler();
+        EndpointMessageHandler<byte[]> messageHandler = new ZeroMQMessageBytesHandler(new ArrayList<>());
         endPoint.setMessageHandler(messageHandler);
 
 

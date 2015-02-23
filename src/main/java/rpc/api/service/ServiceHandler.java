@@ -6,4 +6,5 @@ package rpc.api.service;
 
 public interface ServiceHandler {
     public String getServiceName();
+    public Object handleCall(Object remoteCall);
 }

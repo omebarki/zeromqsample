@@ -23,7 +23,7 @@
             <artifactId>maven-protoc-plugin</artifactId>
             <version>0.1.10</version>
             <configuration>
-                <protocExecutable>/Users/retina/Documents/DEV_PROJECTS/protobuf-3.0.0/bin/protoc</protocExecutable>
+                <protocExecutable>C:/omar_depot/eclipse_workspace/zeromqsample/proto/protoc</protocExecutable>
             </configuration>
             <executions>
                 <execution>
@@ -31,6 +31,7 @@
                         <goal>compile</goal>
                         <goal>testCompile</goal>
                     </goals>
+                    <phase>generate-sources</phase>
                 </execution>
             </executions>
         </plugin>
