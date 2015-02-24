@@ -37,7 +37,7 @@ public class ZeroMQMessageBytesHandler implements EndpointMessageHandler<byte[]>
             responseEnvelop = Envelop.ResponseEnvelop.newBuilder()
                     .setIsOK(false)
                     .setService(serviceName)
-                    .setResult(0, ByteString.copyFromUtf8(e.getMessage()))
+                    .addResult(ByteString.copyFromUtf8(e.getMessage()))
                     .build();
         }
         return responseEnvelop;

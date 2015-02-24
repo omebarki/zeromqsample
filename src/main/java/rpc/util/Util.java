@@ -1,7 +1,5 @@
 package rpc.util;
 
-import sun.rmi.runtime.Log;
-
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -14,7 +12,7 @@ import java.security.NoSuchAlgorithmException;
  * Created by Omar MEBARKI on 22/02/15.
  */
 public class Util {
-    public static long computeMethodHash(Method var0) {
+    public static String computeMethodHash(Method var0) {
         long var1 = 0L;
         ByteArrayOutputStream var3 = new ByteArrayOutputStream(127);
 
@@ -37,7 +35,7 @@ public class Util {
             throw new SecurityException(var10.getMessage());
         }
 
-        return var1;
+        return  Long.toString(var1);
     }
 
     private static String getMethodNameAndDescriptor(Method var0) {
